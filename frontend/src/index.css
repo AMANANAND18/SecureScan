@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --purple-dark: #0a0014;
+  --purple-main: #1a0033;
+  --purple-light: #8000ff;
+  --cyber-black: #0a0a0a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Play', 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--cyber-black);
+}
+
+.gradient-background {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  position: relative;
+}
+
+@layer components {
+  .dropzone {
+    @apply relative flex flex-col items-center justify-center w-full rounded-lg border-2 border-gray-400 p-6 transition-all duration-300 ease-in-out bg-black bg-opacity-50 backdrop-blur-sm;
+  }
+
+  .dropzone-active {
+    @apply border-gray-300 bg-opacity-70;
+  }
+
+  .cyber-text {
+    font-family: 'Play', 'Space Grotesk', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
